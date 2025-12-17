@@ -36,6 +36,21 @@ The `invalid.csv` file will contain numbers that do not have WhatsApp.
 The `valid.csv` file will contain numbers that have WhatsApp.
 The `unlimited.csv` file may appear if there are numbers left that are outside the daily limit you have set in the settings. This will allow you to continue working on checking numbers using this file.
 
+---
+
+## How it works under the hood
+WhatsApp number checking works by verifying whether a phone number is registered on the WhatsApp platform.
+From a user perspective, this is similar to what happens when you try to start a chat with a phone number in WhatsApp: if the number is not registered, WhatsApp clearly indicates that the user is not on WhatsApp.
+Whapi.Cloud performs this check programmatically via an API channel. Instead of using the WhatsApp user interface, the API communicates with WhatsApp through an active, linked WhatsApp session using real-time sockets. The connected WhatsApp number sends a lightweight availability request and receives a response indicating whether the target number exists on WhatsApp.
+
+## Tips for Mass Checks
+Like any activity on WhatsApp, very aggressive or unnatural behavior — such as checking large volumes of numbers instantly without pauses — can increase the risk of restrictions or account bans. WhatsApp actively monitors usage patterns.
+To reduce this risk, Whapi.Cloud provides configurable limits in both the web interface and the open-source checker script. You can control batch size, delays between checks, and overall speed to keep activity within safe and realistic patterns.
+
+If you prefer not to connect your own WhatsApp number or want to avoid operational risks, you can order a done-for-you bulk number check. In this case, our team processes your list using our infrastructure and delivers clean results without requiring you to run checks yourself. Contact our team to find out more and order this service: care@whapi.cloud
+
+---
+
 ## Getting Started
 https://support.whapi.cloud/help-desk/getting-started/getting-started
 ### How to Connect to Whapi.Cloud
